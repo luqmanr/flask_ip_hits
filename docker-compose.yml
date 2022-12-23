@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  flask_serv:
+    image: "python:flask"
+    restart: always
+    volumes:
+      - ./:/app
+    working_dir: /app
+    network_mode: "host"    
+    command: "python3 main.py"
